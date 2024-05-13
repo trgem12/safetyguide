@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>SK오앤에스 안전가이드</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+                            {% block content %}{% endblock %}
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li>
+											<span class="opener">SGR 9대 항목</span>
+											<ul>
+												<li><a href="safetygear.html">안전보호구</a></li>
+												<li><a href="riskassessment.html">위험성평가</a></li>
+												<li><a href="tbm.html">TBM</a></li>
+												<li><a href="workplan.html">작업계획서</a></li>
+												<li><a href="ladder.html">사다리&고소작업대</a></li>
+												<li><a href="electricity.html">전원(전기)</a></li>
+												<li><a href="roadside.html">도로변 작업(신호수)</a></li>
+												<li><a href="confinedspace.html">밀폐공간(맨홀 등)</a></li>
+												<li><a href="temperatures.html">기온(하절기/동절기)</a></li>
+												<li><a href="sanctionstandards.html">기타(SGR 제재 기준)</a></li>
+												<li><a href="rmgrade.html">기타(상황별 RM등급)</a></li>
+											</ul>
+										</li>
+										<li><a href="response.html">산업/중대재해 대응 프로세스</a></li>
+										<li><a href="guidebook.html">SKO 안전관리 Guide Book</a></li>
+									</ul>
+								</nav>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; SK오앤에스 안전보건담당</p>
+								</footer>
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+        <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+	</body>
+</html>
