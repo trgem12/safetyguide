@@ -1930,13 +1930,13 @@ button,
   transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   background-color: #f5f6f7;
   font-size: 0.9em;
-  position: relative;
+  position: relative; /*relative*/
   width: 26em; }
   #sidebar h2 {
     font-size: 1.38889em; }
   #sidebar > .inner {
     padding: 2.22222em 2.22222em 2.44444em 2.22222em ;
-    position: relative;
+    position: relative; /*relative*/
     width: 26em; }
     #sidebar > .inner > * {
       border-bottom: solid 2px rgba(210, 215, 217, 0.75);
@@ -1967,8 +1967,8 @@ button,
     left: 26em;
     line-height: 7.5em;
     outline: 0;
-    overflow: hidden;
-    position: absolute;
+    overflow: hidden;   /*hidden*/
+    position: absolute; /*absolute*/
     text-align: center;
     text-indent: -15em;
     white-space: nowrap;
@@ -1992,7 +1992,7 @@ button,
       height: inherit;
       left: 0;
       line-height: inherit;
-      position: absolute;
+      position: absolute;  /* = 표시 부분*/
       text-indent: 0;
       top: 0;
       width: inherit; }
@@ -2034,7 +2034,7 @@ button,
         left: 0;
         overflow-x: hidden;
         overflow-y: auto;
-        position: absolute;
+        position: absolute;    /*absolute*/
         top: 0; }
         #sidebar > .inner:after {
           content: '';
@@ -2199,7 +2199,7 @@ button,
   -ms-user-select: none;
   user-select: none;
   color: #3d4449;
-  font-family: "Roboto Slab", serif;
+  /*font-family: "Roboto", serif;*/
   font-weight: 400;
   letter-spacing: 0.075em;
   list-style: none;
@@ -2232,7 +2232,7 @@ button,
         text-rendering: auto;
         line-height: 1;
         text-transform: none !important;
-        font-family: 'Font Awesome 5 Free';
+        font-family: 'Font Awesome 5 Free';   /* 하위 메뉴 표기 아이콘 */
         font-weight: 900; }
       #menu ul a.opener:before, #menu ul span.opener:before {
         -moz-transition: color 0.2s ease-in-out, -moz-transform 0.2s ease-in-out;
@@ -2271,3 +2271,7 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+#menu ul li span.opener + ul a, #menu ul li span.opener + ul span {
+    font-family: 'Roboto'; color: black; /* 원하는 글꼴 이름으로 변경하세요. */
+}
