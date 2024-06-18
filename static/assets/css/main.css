@@ -1929,7 +1929,7 @@ button,
   -ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   background-color: #f5f6f7;
-  font-size: 0.9em;
+  font-size: 1.0em; /*0.9em*/
   position: relative; /*relative*/
   width: 26em; }
   #sidebar h2 {
@@ -2033,7 +2033,7 @@ button,
         height: 100%;
         left: 0;
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: auto;    /*auto*/
         position: absolute;    /*absolute*/
         top: 0; }
         #sidebar > .inner:after {
@@ -2275,3 +2275,5 @@ button,
 #menu ul li span.opener + ul a, #menu ul li span.opener + ul span {
     font-family: 'Roboto'; color: black; /* 원하는 글꼴 이름으로 변경하세요. */
 }
+
+
