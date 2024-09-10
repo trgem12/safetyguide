@@ -287,5 +287,94 @@
 //
 //        });
 
+
+// 팝업창 띄우기
+//window.onload = function() {
+//    document.getElementById('popup').style.display = 'block';
+//    document.getElementById('popup-background').style.display = 'block';
+//};
+
+// 팝업창 닫기
+//document.getElementById('close-popup').addEventListener('click', function() {
+//    document.getElementById('popup').style.display = 'none';
+//    document.getElementById('popup-background').style.display = 'none';
+//});
+
+
+
+
+// 팝업창 띄우기
+window.onload = function() {
+    // 로컬 스토리지에 저장된 'popupClosedToday' 값 확인
+    if (!localStorage.getItem('popupClosedToday')) {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('popup-background').style.display = 'block';
+    }
+};
+
+// 팝업창 닫기
+document.getElementById('close-popup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('popup-background').style.display = 'none';
+});
+
+// 오늘 하루 보지 않기 버튼 클릭 시
+document.getElementById('close-today-popup').addEventListener('click', function() {
+    // 현재 시간을 기준으로 24시간 후의 만료 시간 설정
+    var now = new Date();
+    var expiration = new Date(now.getTime() + 24 * 60 * 60 * 1000); // 24시간
+    localStorage.setItem('popupClosedToday', expiration);
+
+    // 팝업 닫기
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('popup-background').style.display = 'none';
+});
+
+// 로컬 스토리지에서 'popupClosedToday' 값 확인 및 만료 처리
+function checkPopupExpiration() {
+    var storedTime = localStorage.getItem('popupClosedToday');
+    if (storedTime) {
+        var expirationTime = new Date(storedTime);
+        if (new Date() > expirationTime) {
+            // 만료 시간이 지나면 로컬 스토리지 값 삭제
+            localStorage.removeItem('popupClosedToday');
+        }
+    }
+}
+
+// 페이지 로드 시 만료 시간 확인
+checkPopupExpiration();
+
+// 검색 기능 (변경 없음)
+//document.getElementById('query').addEventListener('keyup', function(e) {
+//    if (e.key === 'Enter') {
+//        e.preventDefault();  // 기본 동작 중단
+//        return;
+//    } else {
+//        var searchQuery = e.target.value.toLowerCase();
+//        var menuItems = document.querySelectorAll('#menu ul li a, #menu ul li span');
+//        menuItems.forEach(function(item) {
+//            var itemText = item.textContent.toLowerCase();
+//            if (itemText.indexOf(searchQuery) > -1 || item.classList.contains('opener')) {
+//                item.style.display = '';
+//                var parentItem = item.parentElement;
+//                while (parentItem) {
+//                    if (parentItem.tagName.toLowerCase() === 'ul' && parentItem.previousElementSibling && parentItem.previousElementSibling.classList.contains('opener')) {
+//                        parentItem.previousElementSibling.classList.add('active');
+//                        parentItem.previousElementSibling.style.display = '';
+//                    }
+//                    parentItem = parentItem.parentElement;
+//                }
+//            } else {
+//                if (!item.classList.contains('opener')) {
+//                    item.style.display = 'none';
+//                }
+//            }
+//        });
+//    }
+//});
+
 })(jQuery);
+
+
 
