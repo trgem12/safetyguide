@@ -111,8 +111,8 @@ a {
   -webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-  border-bottom: dotted 1px;
-  color: #f56a6a;
+  /*border-bottom: dotted 1px;*/ /*팝업창에서 텍스트 밑줄 없애기*/
+  color: #000000;    /*팝업창에서 텍스트 색 변경 기존 > #f56a6a*/
   text-decoration: none; }
   a:hover {
     border-bottom-color: #f56a6a;
