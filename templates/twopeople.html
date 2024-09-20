@@ -5,6 +5,11 @@
 		<header class="main">
 			<h1>SKO 2인1조 작업 유형</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/2인1조twopeople/twopeople.1.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/2인1조twopeople/twopeople.1.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/2인1조twopeople/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

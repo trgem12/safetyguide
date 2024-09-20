@@ -5,18 +5,23 @@
 		<header class="main">
 			<h1>전기작업 안전</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.1.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.2.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.3.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.4.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.5.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.6.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.7.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.8.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.9.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.10.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.11.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.12.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.13.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.1.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.2.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.3.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.4.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.5.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.6.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.7.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.8.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.9.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.10.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.11.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.12.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/electricalwork.13.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/전기작업안전electricalwork/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

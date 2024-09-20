@@ -5,13 +5,18 @@
 		<header class="main">
 			<h1>구간별 도로 통제 절차</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.1.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.2.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.3.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.4.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.5.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.6.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.7.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.8.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.1.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.2.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.3.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.4.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.5.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.6.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.7.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/roadcontrol.8.jpg') }}" alt="" /></span>-->
+        {% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/구간별도로통제절차roadcontrol/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

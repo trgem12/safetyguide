@@ -5,8 +5,13 @@
 		<header class="main">
 			<h1>이동식사다리</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/이동식사다리safetybelt/safetybelt.1.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/이동식사다리safetybelt/safetybelt.2.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/이동식사다리safetybelt/safetybelt.3.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/이동식사다리safetybelt/safetybelt.1.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/이동식사다리safetybelt/safetybelt.2.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/이동식사다리safetybelt/safetybelt.3.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/이동식사다리safetybelt/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

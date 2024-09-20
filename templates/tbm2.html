@@ -5,6 +5,11 @@
 		<header class="main">
 			<h1>TBM(Tool Box Meeting)</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/tbm2/tbm2.1.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/tbm2/tbm2.1.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/tbm2/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

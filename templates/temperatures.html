@@ -5,11 +5,17 @@
 		<header class="main">
 			<h1>기온(하절기/동절기)</h1>
 		</header>
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.1.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.2.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.3.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.4.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.5.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.6.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.1.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.2.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.3.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.4.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.5.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기온temperatures/temperatures.6.jpg') }}" alt="" /></span>-->
+
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/기온temperatures/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

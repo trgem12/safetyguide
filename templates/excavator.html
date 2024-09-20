@@ -5,9 +5,14 @@
 		<header class="main">
 			<h1>굴착기</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/굴착기excavator/excavator.1.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/굴착기excavator/excavator.2.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/굴착기excavator/excavator.3.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/굴착기excavator/excavator.4.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/굴착기excavator/excavator.1.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/굴착기excavator/excavator.2.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/굴착기excavator/excavator.3.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/굴착기excavator/excavator.4.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/굴착기excavator/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

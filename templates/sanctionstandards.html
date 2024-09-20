@@ -5,10 +5,15 @@
 		<header class="main">
 			<h1>기타(SGR 제재 기준)</h1>
 		</header>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기타(sgr제재기준)sanctionstandards/sanctionstandards.1.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기타(sgr제재기준)sanctionstandards/sanctionstandards.2.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기타(sgr제재기준)sanctionstandards/sanctionstandards.3.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/기타(sgr제재기준)sanctionstandards/sanctionstandards.4.jpg') }}" alt="" /></span>-->
 
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기타(sgr제재기준)sanctionstandards/sanctionstandards.1.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기타(sgr제재기준)sanctionstandards/sanctionstandards.2.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기타(sgr제재기준)sanctionstandards/sanctionstandards.3.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
-		<span class="image main"></span><img src="{{ url_for('static', filename='assets/기타(sgr제재기준)sanctionstandards/sanctionstandards.4.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/기타(sgr제재기준)sanctionstandards/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

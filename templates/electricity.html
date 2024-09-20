@@ -6,7 +6,13 @@
 			<h1>전원(전기)</h1>
 		</header>
 
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전원(전기)electricity/electricity.1.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/전원(전기)electricity/electricity.2.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전원(전기)electricity/electricity.1.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/전원(전기)electricity/electricity.2.jpg') }}" alt="" /></span>-->
+
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/전원(전기)electricity/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

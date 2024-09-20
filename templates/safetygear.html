@@ -6,12 +6,13 @@
 		<header class="main">
 			<h1>안전보호구</h1>
 		</header>
-<!--		<span class="image main"></span><img src="{{ url_for('static', filename='assets/안전보호구safetygear/safetygear.1.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>-->
-<!--		<span class="image main"></span><img src="{{ url_for('static', filename='assets/안전보호구safetygear/safetygear.2.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>-->
-<!--		<span class="image main"></span><img src="{{ url_for('static', filename='assets/안전보호구safetygear/safetygear.3.jpg') }}" alt="" style="max-width:100%; height:auto;" /></span>-->
-		<span class="image main"><img src="{{ url_for('static', filename='assets/안전보호구safetygear/safetygear.1.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/안전보호구safetygear/safetygear.2.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/안전보호구safetygear/safetygear.3.jpg') }}" alt="" /></span>
-
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/안전보호구safetygear/safetygear.1.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/안전보호구safetygear/safetygear.2.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/안전보호구safetygear/safetygear.3.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+        <span class="image main">
+            <img src="{{ url_for('static', filename='assets/안전보호구safetygear/' + image) }}" alt="{{ image.split('.')[0] }}" />
+        </span>
+   		 {% endfor %}
 	</section>
 {% endblock %}

@@ -5,13 +5,18 @@
 		<header class="main">
 			<h1>고소작업대</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.1.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.2.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.3.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.4.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.5.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.6.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.7.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.8.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.1.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.2.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.3.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.4.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.5.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.6.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.7.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/고소작업대aerialwork/aerialwork.8.jpg') }}" alt="" /></span>-->
+        {% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/고소작업대aerialwork/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

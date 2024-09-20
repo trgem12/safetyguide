@@ -5,6 +5,11 @@
 		<header class="main">
 			<h1>경영방침</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/경영방침managementpolicy/managementpolicy.1.jpg') }}" alt="" /></span> <!-- 경영방침 -->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/경영방침managementpolicy/managementpolicy.1.jpg') }}" alt="" /></span> &lt;!&ndash; 경영방침 &ndash;&gt;-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/경영방침managementpolicy/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

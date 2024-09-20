@@ -5,8 +5,13 @@
 		<header class="main">
 			<h1>고위험 작업 입회 기준</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/고위험작업입회highriskwork/highriskwork.1.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/고위험작업입회highriskwork/highriskwork.2.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/고위험작업입회highriskwork/highriskwork.3.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/고위험작업입회highriskwork/highriskwork.1.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/고위험작업입회highriskwork/highriskwork.2.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/고위험작업입회highriskwork/highriskwork.3.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/고위험작업입회highriskwork/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

@@ -5,8 +5,13 @@
 		<header class="main">
 			<h1>작업계획서 및 특별교육 대상</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/작업계획서특별교육workplan2/workplan2.1.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/작업계획서특별교육workplan2/workplan2.2.jpg') }}" alt="" /></span>
-        <span class="image main"><img src="{{ url_for('static', filename='assets/작업계획서특별교육workplan2/workplan2.3.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/작업계획서특별교육workplan2/workplan2.1.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/작업계획서특별교육workplan2/workplan2.2.jpg') }}" alt="" /></span>-->
+<!--        <span class="image main"><img src="{{ url_for('static', filename='assets/작업계획서특별교육workplan2/workplan2.3.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/작업계획서특별교육workplan2/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

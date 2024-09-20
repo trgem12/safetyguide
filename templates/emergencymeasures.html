@@ -5,10 +5,15 @@
 		<header class="main">
 			<h1>응급조치 Guide</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.1.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.2.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.3.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.4.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.5.jpg') }}" alt="" /></span>
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.1.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.2.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.3.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.4.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/emergencymeasures.5.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/응급조치emergencymeasures/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}

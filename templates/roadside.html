@@ -5,9 +5,13 @@
 		<header class="main">
 			<h1>도로변 작업(신호수)</h1>
 		</header>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/도로변작업(신호수)roadside/roadside.1.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/도로변작업(신호수)roadside/roadside.2.jpg') }}" alt="" /></span>
-		<span class="image main"><img src="{{ url_for('static', filename='assets/도로변작업(신호수)roadside/roadside.3.jpg') }}" alt="" /></span>
-	
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/도로변작업(신호수)roadside/roadside.1.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/도로변작업(신호수)roadside/roadside.2.jpg') }}" alt="" /></span>-->
+<!--		<span class="image main"><img src="{{ url_for('static', filename='assets/도로변작업(신호수)roadside/roadside.3.jpg') }}" alt="" /></span>-->
+		{% for image in images %}
+			<span class="image main">
+				<img src="{{ url_for('static', filename='assets/도로변작업(신호수)roadside/' + image) }}" alt="{{ image.split('.')[0] }}" />
+			</span>
+		{% endfor %}
 	</section>
 {% endblock %}
