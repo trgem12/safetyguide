@@ -321,7 +321,7 @@ def scaffolding():
 
 @app.route("/electricalwork.html")
 def electricalwork():
-    image_folder = os.path.join(app.static_folder, 'assets/비계(이동식비계)scaffolding')
+    image_folder = os.path.join(app.static_folder, 'assets/전기작업안전electricalwork')
     # 이미지 파일 목록을 가져오고 확장자가 jpg 또는 png인 파일만 선택
     image_files = [f for f in os.listdir(image_folder) if f.endswith('.jpg') or f.endswith('.png')]
     # 파일명을 정렬 (숫자가 포함된 경우 순서대로 표시)
@@ -453,6 +453,15 @@ def roadcontrol():
     # 파일명을 정렬 (숫자가 포함된 경우 순서대로 표시)
     image_files.sort()
     return render_template('roadcontrol.html', images=image_files)
+
+@app.route("/ytbucketvehiclework.html")
+def ytbucketvehiclework():
+    image_folder = os.path.join(app.static_folder, 'assets/ytbucketvehiclework')
+    # 이미지 파일 목록을 가져오고 확장자가 jpg 또는 png인 파일만 선택
+    image_files = [f for f in os.listdir(image_folder) if f.endswith('.jpg') or f.endswith('.png')]
+    # 파일명을 정렬 (숫자가 포함된 경우 순서대로 표시)
+    image_files.sort()
+    return render_template('ytbucketvehiclework.html', images=image_files)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>SK오앤에스 안전가이드</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+                            {% block content %}{% endblock %}
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+					   		<!-- Search -->
+							<section id="search" class="alt">
+								<input type="text" name="query" id="query" placeholder="Search" />
+							</section>
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li>
+											<span class="opener">SGR 9대 항목</span>
+											<ul>
+												<li><a href="safetygear.html">안전보호구</a></li>
+												<li><a href="riskassessment.html">위험성평가</a></li>
+												<li><a href="tbm.html">TBM</a></li>
+												<li><a href="workplan.html">작업계획서</a></li>
+												<li><a href="ladder.html">사다리&고소작업대</a></li>
+												<li><a href="electricity.html">전원(전기)</a></li>
+												<li><a href="roadside.html">도로변 작업(신호수)</a></li>
+												<li><a href="confinedspace.html">밀폐공간(맨홀 등)</a></li>
+												<li><a href="temperatures.html">기온(하절기/동절기)</a></li>
+												<li><a href="sanctionstandards.html">기타(SGR 제재 기준)</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">산업/중대재해</span>
+											<ul>
+											<li><a href="response.html">1. 산업/중대재해 대응 프로세스</a></li>
+											<li><a href="responsesystem.html">2. 중대재해 대응 체계</a></li>
+											<li><a href="responseguide.html">3. 중대재해 대응 가이드</a></li>
+											<li><a href="mocktraining.html">4. 중대재해 모의훈련</a></li>
+											<li><a href="contact.html">(기타)전국 지방고용노동관서 연락처 현황</a></li>
+											<li><a href="questionnaire.html">(기타)산업재해 조사표 제출 안내문</a></li>
+											</ul>
+											</li>
+										<li>
+											<span class="opener">'24년 안전보건 Guide Book</span>
+											<ul>
+												<span>1. 안전보건경영방침</span>
+												<ul>
+													<li><a href="cspo.html">1.1 CSPO인사말</a></li> <!-- 35 -->
+													<li><a href="managementpolicy.html">1.2 경영방침</a></li> <!--  15 -->
+												</ul>
+												<li><a href="rolebyjob.html">2. 직무별역할</a></li> <!-- 16 -->
+												<li><a href="sgr.html">3. SGR(Safety Golden Rules)</a></li> <!-- 17 -->
+												<span>4. 안전등급</span>
+												<ul>
+													<li><a href="safetylevel.html">4.1 SKO 안전등급</a></li> <!-- 18 -->
+													<li><a href="workplan2.html">4.2 작업계획서 및 특별교육 대상</a></li> <!-- 36 -->
+													<li><a href="highriskwork.html">4.3 고위험 작업 입회 기준</a></li> <!-- 37 -->
+													<li><a href="twopeople.html">4.4 SKO 2인1조 작업 유형</a></li> <!-- 38 -->
+												</ul>
+												<li><a href="tbm2.html">5. TBM(Tool Box Meeting)</a></li> <!-- 19 -->
+												<li><a href="safetyaccidents.html">6. 안전사고 보고체계 SKO&SKT</a></li> <!-- 20 -->
+												<li>
+													<span>7. 놓치기 쉬운 안전수칙!</span>
+												  	<ul>
+													<li><a href="aerialwork.html">7.1 고소작업대</a></li> <!-- 21 -->
+													<li><a href="mobilecrane.html">7.2 이동식크레인</a></li> <!-- 22 -->
+													<li><a href="forklift.html">7.3 지게차</a></li> <!-- 23 -->
+													<li><a href="excavator.html">7.4 굴착기</a></li> <!-- 24 -->
+													<li><a href="truck.html">7.5 트럭류</a></li> <!-- 25 -->
+													<li><a href="portableladder.html">7.6 이동식사다리</a></li> <!-- 26 -->
+													<li><a href="safetybelt.html">7.7 안전대</a></li> <!-- 27 -->
+													<li><a href="scaffolding.html">7.8 비계(이동식비계 등)</a></li> <!-- 28 -->
+													<li><a href="electricalwork.html">7.9 전기작업 안전</a></li> <!-- 29 -->
+													<li><a href="hotwork.html">7.10 화기작업 안전(전기/가스용접)</a></li> <!-- 30 -->
+													<li><a href="roadsidework.html">7.11 도로변 작업</a></li> <!-- 31 -->
+													<li><a href="confinedspacework.html">7.12 밀폐공간 작업</a></li> <!-- 32 -->
+													<li><a href="heavywork.html">7.13 중량물 작업</a></li> <!-- 33 -->
+													<li><a href="safetygear2.html">7.14 안전보호구(Kcs인증)</a></li>  <!-- 34 -->
+												  </ul>
+												</li>
+												<li><a href="seasonalresponse.html">8. 계절별 대응 Guide</a></li> <!-- 39 -->
+												<li><a href="emergencymeasures.html">9. 응급조치 Guide</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">[전송]현장 작업지침서</span>
+											<ul>
+												<li><a href="worknstructions.html">목차</a></li>
+												<li><a href="tbm3.html">TBM</a></li>
+												<li><a href="safetystandards.html">SKO 안전기준</a></li>
+												<li><a href="workheights.html">고소작업 행동절차</a></li>
+												<li><a href="manhowork.html">맨홀작업 행동절차</a></li>
+												<li><a href="signalman.html">신호수,방호차량 기준</a></li>
+												<li><a href="roadcontrol.html">구간별 도로 통제 절차</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">안전교육 동영상 모음</span>
+											<ul>
+												<li><a href="ytmobilecrane.html">이동식크레인</a></li>
+												<li><a href="ytaerialwork.html">고소작업대</a></li>
+												<li><a href="ytexcavator.html">굴착기</a></li>
+												<li><a href="ytskywork.html">스카이</a></li>
+												<li><a href="ytladdercar.html">사다리차</a></li>
+												<li><a href="ytrailway.html">철도/레일</a></li>
+												<li><a href="ytrooftop.html">옥상/옥탑</a></li>
+												<li><a href="ytpole.html">전주 Pole</a></li>
+												<li><a href="ytladder.html">사다리</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; SK오앤에스 안전보건담당</p>
+								</footer>
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+        <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+        <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+		<script>
+		document.getElementById('query').addEventListener('keyup', function(e) {
+		  if (e.key === 'Enter') {
+			e.preventDefault();  // 기본 동작 중단
+			return;
+		  } else {
+			var searchQuery = e.target.value.toLowerCase();
+			var menuItems = document.querySelectorAll('#menu ul li a, #menu ul li span');
+
+			menuItems.forEach(function(item) {
+			  var itemText = item.textContent.toLowerCase();
+			  if (itemText.indexOf(searchQuery) > -1 || item.classList.contains('opener')) {
+				item.style.display = '';
+				var parentItem = item.parentElement;
+				while (parentItem) {
+				  if (parentItem.tagName.toLowerCase() === 'ul' && parentItem.previousElementSibling && parentItem.previousElementSibling.classList.contains('opener')) {
+					parentItem.previousElementSibling.classList.add('active');
+					parentItem.previousElementSibling.style.display = '';
+				  }
+				  parentItem = parentItem.parentElement;
+				}
+			  } else {
+				if (!item.classList.contains('opener')) {
+				  item.style.display = 'none';
+				}
+			  }
+			});
+		  }
+		});
+        </script>
+	</body>
+</html>
